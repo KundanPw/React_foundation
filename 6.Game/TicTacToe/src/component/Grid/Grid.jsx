@@ -37,7 +37,7 @@ function Grid({ numberOfCards }) {
     }
 
     return (
-        <div className="gir-wrapper">
+        <div className="grid-wrapper">
             {winner && (
                 <> 
                     <h1 className="turn-highlight">Winner is {winner} </h1> 
@@ -48,7 +48,7 @@ function Grid({ numberOfCards }) {
             <h1 className="turn-highlight">Current Turn: {(turn)? 'O': 'X'} </h1>
             <div className="grid">
                 {board.map((value, idx) => {
-                    return <Card gameEnd = {winner ? true: false } onPlay={play} player={value} key={idx} index={idx} />
+                    <Card gameEnd = {winner ? true: false } onPlay={play} player={value} key={idx} index={idx} />
                 })}
             </div>
         </div>
